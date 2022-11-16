@@ -16,6 +16,10 @@ return new class extends Migration
         Schema::create('liquids', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
+            $table->string('description');
+            $table->decimal('price', 3, 2);
+            $table->binary('picture')->nullable();
         });
     }
 
